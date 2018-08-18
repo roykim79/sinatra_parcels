@@ -42,4 +42,21 @@ describe Parcel do
       expect(parcel.weight_cost()).to eq(12.5)
     end
   end
+
+  describe '#cost_to_ship' do
+    it 'returns the greater cost between volume_cost and weight_cost' do
+      parcel = Parcel.new(1, 1, 1, 1)
+      expect(parcel.cost_to_ship()).to eq(1.5)
+    end
+
+    it 'returns the greater cost between volume_cost and weight_cost' do
+      parcel = Parcel.new(1, 2, 1, 5)
+      expect(parcel.cost_to_ship()).to eq(6.25)
+    end
+
+    it 'returns the greater cost between volume_cost and weight_cost' do
+      parcel = Parcel.new(1, 2, 2, 3)
+      expect(parcel.cost_to_ship()).to eq(6)
+    end
+  end
 end

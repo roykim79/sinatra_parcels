@@ -17,4 +17,8 @@ class Parcel
     cost_per_ounce = 1.25
     @weight * cost_per_ounce
   end
+
+  def cost_to_ship
+    volume_cost > weight_cost ? volume_cost : weight_cost
+  end
 end
