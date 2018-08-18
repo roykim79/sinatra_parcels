@@ -8,4 +8,28 @@ describe Parcel do
       expect(parcel.volume()).to eq(8)
     end
   end
+
+  describe '#volume_cost' do
+    it 'returns the cost at a rate of $1.50/cubic-inch' do
+      parcel = Parcel.new(1, 1, 1, 1)
+      expect(parcel.volume_cost()).to eq(1.5)
+    end
+
+    it 'returns the cost at a rate of $1.50/cubic-inch' do
+      parcel = Parcel.new(1, 2, 1, 1)
+      expect(parcel.volume_cost()).to eq(3)
+    end
+
+    it 'returns the cost at a rate of $1.50/cubic-inch' do
+      parcel = Parcel.new(1, 2, 2, 1)
+      expect(parcel.volume_cost()).to eq(6)
+    end
+  end
+
+  describe '#weight_cost' do
+    it 'returns the cost at a rate of $1.25/ounce' do
+      parcel = Parcel.new(1, 1, 2, 2)
+      expect(parcel.weight_cost()).to eq(2.5)
+    end
+  end
 end
