@@ -31,5 +31,15 @@ describe Parcel do
       parcel = Parcel.new(1, 1, 2, 2)
       expect(parcel.weight_cost()).to eq(2.5)
     end
+
+    it 'returns the cost at a rate of $1.25/ounce' do
+      parcel = Parcel.new(1, 4, 2, 5)
+      expect(parcel.weight_cost()).to eq(6.25)
+    end
+
+    it 'returns the cost at a rate of $1.25/ounce' do
+      parcel = Parcel.new(1, 1, 2, 10)
+      expect(parcel.weight_cost()).to eq(12.5)
+    end
   end
 end
