@@ -1,0 +1,23 @@
+<h1>Calculate your shipping costs</h1>
+<p>Cost will be the greater of $1.50/cubic-inch and $1.25/ounce</p>
+<p>Enter the details of your parcel</p>
+
+<form action="/output">
+  <div class="form-group">
+    <label for="length">Length (inches)</label>
+    <input id="length" name="length" class="form-control" type="number">
+  </div>
+  <div class="form-group">
+    <label for="width">Width (inches)</label>
+    <input id="width" name="width" class="form-control" type="number">
+  </div>
+  <div class="form-group">
+    <label for="height">Height (inches)</label>
+    <input id="height" name="height" class="form-control" type="number">
+  </div>
+  <div class="form-group">
+    <label for="weight">Weight (ounces)</label>
+    <input id="weight" name="weight" class="form-control" type="number">
+  </div>
+  <button type="submit" class="btn btn-primary">Get shipping cost</button>
+</form>
