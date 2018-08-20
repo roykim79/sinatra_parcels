@@ -10,12 +10,12 @@ class Parcel
 
   def volume_cost
     cost_per_cubic_inch = 1.5
-    @volume * cost_per_cubic_inch
+    '%.2f' % (@volume * cost_per_cubic_inch)
   end
 
   def weight_cost
     cost_per_ounce = 1.25
-    @weight * cost_per_ounce
+    '%.2f' % (@weight * cost_per_ounce)
   end
 
   def cost_to_ship
